@@ -1,8 +1,7 @@
-//Write a program to perform pop,push,traverseoperations on the stack using pointer(Dynamic Stack)
 #include <stdio.h>
 #include <stdlib.h>
 
-// Structure to represent each node in the stack
+// Structure for stack node
 struct Node {
     int data;
     struct Node* next;
@@ -18,25 +17,26 @@ void push() {
 
     struct Node* newNode = (struct Node*) malloc(sizeof(struct Node));
     if (newNode == NULL) {
-        printf("Stack Overflow (Memory allocation failed)\n");
+        printf("Memory allocation failed! Stack overflow.\n");
         return;
     }
 
     newNode->data = value;
     newNode->next = top;
     top = newNode;
-    printf("Pushed %d to stack\n", value);
+
+    printf("Pushed %d onto the stack.\n", value);
 }
 
 // Pop operation
 void pop() {
     if (top == NULL) {
-        printf("Stack Underflow (Stack is empty)\n");
+        printf("Stack Underflow! No elements to pop.\n");
         return;
     }
 
     struct Node* temp = top;
-    printf("Popped %d from stack\n", temp->data);
+    printf("Popped element: %d\n", temp->data);
     top = top->next;
     free(temp);
 }
@@ -44,24 +44,23 @@ void pop() {
 // Traverse operation
 void traverse() {
     if (top == NULL) {
-        printf("Stack is empty\n");
+        printf("Stack is empty.\n");
         return;
     }
 
     struct Node* temp = top;
-    printf("Stack elements: ");
+    printf("Stack elements (Top to Bottom):\n");
     while (temp != NULL) {
-        printf("%d ", temp->data);
+        printf("%d\n", temp->data);
         temp = temp->next;
     }
-    printf("\n");
 }
 
-// Main menu
+// Main function with menu
 int main() {
     int choice;
     do {
-        printf("\n*** Stack Menu (Using Pointer) ***\n");
+        printf("\n*** Stack Menu (Using Pointers) ***\n");
         printf("1. Push\n2. Pop\n3. Traverse\n4. Exit\n");
         printf("Enter your choice (1-4): ");
         scanf("%d", &choice);
@@ -71,7 +70,7 @@ int main() {
             case 2: pop(); break;
             case 3: traverse(); break;
             case 4: printf("Exiting program.\n"); break;
-            default: printf("Invalid choice! Try again.\n");
+            default: printf("Invalid choice. Try again.\n");
         }
     } while (choice != 4);
 
