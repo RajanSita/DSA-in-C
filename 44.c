@@ -5,7 +5,7 @@
 // d. Count the number
 // e. Find maximum element
 // f. Find minimum element
-// g. Find height of the tree
+// g. Find height of the tree 
 #include <stdio.h>
 #include <stdlib.h>
 struct Node
