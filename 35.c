@@ -29,7 +29,6 @@ void delete() {
     }
     printf("Deleted: %d\n", queue[front]);
     if (front == rear) {
-        // Only one element was present
         front = rear = -1;
     } else {
         front = (front + 1) % SIZE;
@@ -53,6 +52,9 @@ void display() {
 }
 
 int main() {
+    printf("Rajan \t BCA 2A\n");
+    printf("Enrolment No. \t 04717702024\n");
+    printf("****************************\n");
     int choice;
     do {
         printf("\n*** Circular Queue Menu ***\n");

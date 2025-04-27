@@ -65,6 +65,9 @@ void infixToPostfix(char* infix) {
 }
 
 int main() {
+    printf("Rajan \t BCA 2A\n");
+    printf("Enrolment No. \t 04717702024\n");
+    printf("****************************\n");
     char infix[MAX];
     printf("Enter Infix Expression: ");
     scanf("%s", infix);

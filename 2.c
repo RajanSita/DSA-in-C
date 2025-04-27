@@ -7,7 +7,7 @@ void linearSearch(int arr[], int size, int key) {
     for (int i = 0; i < size; i++) {
         if (arr[i] == key) {
             if (firstOccurrence == -1)
-                firstOccurrence = i; // Store first occurrence
+                firstOccurrence = i; 
             printf("%d ", i);
         }
     }

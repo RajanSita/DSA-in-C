@@ -31,7 +31,9 @@ void traverse() {
 }
 
 int main() {
-    printf("Rajan \t BCA 2A\nEnrolment No. \t 04717702024\n****************************\n");
+    printf("Rajan \t BCA 2A\n");
+    printf("Enrolment No. \t 04717702024\n");
+    printf("****************************\n");
     push(10);
     push(20);
     push(30);

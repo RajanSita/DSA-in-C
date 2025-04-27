@@ -6,13 +6,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Define structure for node
 struct Node {
     int data;
     struct Node* next;
 };
 
-// Function to create a new node
 struct Node* createNode(int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
@@ -20,7 +18,6 @@ struct Node* createNode(int data) {
     return newNode;
 }
 
-// Insert a node at the end for easy testing
 void insertAtEnd(struct Node** head, int data) {
     struct Node* newNode = createNode(data);
     if (*head == NULL) {
@@ -34,7 +31,6 @@ void insertAtEnd(struct Node** head, int data) {
     temp->next = newNode;
 }
 
-// Delete node from beginning
 void deleteAtBeginning(struct Node** head) {
     if (*head == NULL) {
         printf("List is empty.\n");
@@ -45,8 +41,6 @@ void deleteAtBeginning(struct Node** head) {
     free(temp);
     printf("Node deleted from the beginning.\n");
 }
-
-// Delete node from end
 void deleteAtEnd(struct Node** head) {
     if (*head == NULL) {
         printf("List is empty.\n");
@@ -67,7 +61,6 @@ void deleteAtEnd(struct Node** head) {
     printf("Node deleted from the end.\n");
 }
 
-// Delete node after a given node
 void deleteAfterNode(struct Node* head, int afterData) {
     struct Node* temp = head;
     while (temp != NULL && temp->data != afterData) {
@@ -82,8 +75,6 @@ void deleteAfterNode(struct Node* head, int afterData) {
     free(nodeToDelete);
     printf("Node deleted after node with data %d.\n", afterData);
 }
-
-// Search for a node and delete if found
 void searchAndDelete(struct Node** head, int key) {
     struct Node* temp = *head;
     struct Node* prev = NULL;
@@ -98,7 +89,6 @@ void searchAndDelete(struct Node** head, int key) {
         return;
     }
 
-    // If node to delete is head
     if (prev == NULL) {
         *head = (*head)->next;
     } else {
@@ -108,7 +98,6 @@ void searchAndDelete(struct Node** head, int key) {
     printf("Element %d found and deleted.\n", key);
 }
 
-// Function to display the linked list
 void displayList(struct Node* head) {
     struct Node* temp = head;
     printf("Linked List: ");
@@ -119,9 +108,10 @@ void displayList(struct Node* head) {
     printf("NULL\n");
 }
 
-// Main function
 int main() {
-    printf("Rajan \t BCA 2A\nEnrolment No. \t 04717702024\n****************************\n");
+    printf("Rajan \t BCA 2A\n");
+    printf("Enrolment No. \t 04717702024\n");
+    printf("****************************\n");
     struct Node* head = NULL;
     int choice, data, afterData, searchKey;
 

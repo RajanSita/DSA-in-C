@@ -1,8 +1,6 @@
 // Write a program to implement priority queue with three priority values (1: Lowest,2,3:Highest)
 #include <stdio.h>
 #include <stdlib.h>
-
-// Structure for a node in the priority queue
 struct Node
 {
     int data;
@@ -11,8 +9,6 @@ struct Node
 };
 
 struct Node *front = NULL;
-
-// Function to create a new node
 struct Node *createNode(int value, int priority)
 {
     struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
@@ -22,7 +18,6 @@ struct Node *createNode(int value, int priority)
     return newNode;
 }
 
-// Insert node according to priority
 void insert(int value, int priority)
 {
     struct Node *newNode = createNode(value, priority);
@@ -44,7 +39,6 @@ void insert(int value, int priority)
     printf("Inserted %d with priority %d\n", value, priority);
 }
 
-// Delete the highest priority element
 void delete()
 {
     if (front == NULL)
@@ -58,8 +52,6 @@ void delete()
     front = front->next;
     free(temp);
 }
-
-// Display the priority queue
 void display()
 {
     if (front == NULL)
@@ -77,9 +69,11 @@ void display()
     }
 }
 
-// Main function with menu
 int main()
 {
+    printf("Rajan \t BCA 2A\n");
+    printf("Enrolment No. \t 04717702024\n");
+    printf("****************************\n");
     int choice, value, priority;
     do
     {

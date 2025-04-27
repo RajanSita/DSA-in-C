@@ -4,13 +4,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Define structure for node
 struct Node {
     int data;
     struct Node* next;
 };
 
-// Function to create a new node
 struct Node* createNode(int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
@@ -18,7 +16,6 @@ struct Node* createNode(int data) {
     return newNode;
 }
 
-// Insert a node at the end of the list
 void insertAtEnd(struct Node** head, int data) {
     struct Node* newNode = createNode(data);
     if (*head == NULL) {
@@ -31,8 +28,6 @@ void insertAtEnd(struct Node** head, int data) {
     }
     temp->next = newNode;
 }
-
-// Function to display a linked list
 void displayList(struct Node* head) {
     struct Node* temp = head;
     while (temp != NULL) {
@@ -42,15 +37,11 @@ void displayList(struct Node* head) {
     printf("NULL\n");
 }
 
-// Merge two sorted linked lists into a new sorted list
 struct Node* mergeSortedLists(struct Node* head1, struct Node* head2) {
-    // If one list is empty, return the other
     if (head1 == NULL) return head2;
     if (head2 == NULL) return head1;
 
     struct Node* mergedHead = NULL;
-
-    // Choose the head of the merged list
     if (head1->data < head2->data) {
         mergedHead = head1;
         head1 = head1->next;
@@ -60,8 +51,6 @@ struct Node* mergeSortedLists(struct Node* head1, struct Node* head2) {
     }
 
     struct Node* mergedTail = mergedHead;
-
-    // Merge both lists
     while (head1 != NULL && head2 != NULL) {
         if (head1->data < head2->data) {
             mergedTail->next = head1;
@@ -72,8 +61,6 @@ struct Node* mergeSortedLists(struct Node* head1, struct Node* head2) {
         }
         mergedTail = mergedTail->next;
     }
-
-    // Attach the remaining elements
     if (head1 != NULL) {
         mergedTail->next = head1;
     } else {
@@ -83,9 +70,10 @@ struct Node* mergeSortedLists(struct Node* head1, struct Node* head2) {
     return mergedHead;
 }
 
-// Main function
 int main() {
-    printf("Rajan \t BCA 2A\nEnrolment No. \t 04717702024\n****************************\n");
+    printf("Rajan \t BCA 2A\n");
+    printf("Enrolment No. \t 04717702024\n");
+    printf("****************************\n");
     struct Node* head1 = NULL;
     struct Node* head2 = NULL;
     struct Node* mergedHead = NULL;

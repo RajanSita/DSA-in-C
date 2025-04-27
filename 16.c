@@ -1,3 +1,4 @@
+//Write a Program to implement Bubble Sort.
 #include <stdio.h>
 
 #define SIZE 5  
@@ -16,8 +17,9 @@ void bubbleSort(int arr[], int size) {
 }
 
 int main() {
-    printf("Rajan \t BCA 2A\nEnrolment No. \t 04717702024\n****************************\n");
-
+    printf("Rajan \t BCA 2A\n");
+    printf("Enrolment No. \t 04717702024\n");
+    printf("****************************\n");
     int arr[SIZE];
     printf("Enter %d elements: ", SIZE);
     for (int i = 0; i < SIZE; i++)

@@ -58,13 +58,10 @@ void insertAfterNode(struct Node* head, int afterData, int data) {
 
 // Insert before a given node
 void insertBeforeNode(struct Node** head, int beforeData, int data) {
-    // If list is empty
     if (*head == NULL) {
         printf("List is empty.\n");
         return;
     }
-
-    // If beforeData is at head
     if ((*head)->data == beforeData) {
         insertAtBeginning(head, data);
         return;
@@ -83,7 +80,6 @@ void insertBeforeNode(struct Node** head, int beforeData, int data) {
     temp->next = newNode;
 }
 
-// Function to display linked list
 void displayList(struct Node* head) {
     struct Node* temp = head;
     printf("Linked List: ");
@@ -94,9 +90,10 @@ void displayList(struct Node* head) {
     printf("NULL\n");
 }
 
-// Main function
 int main() {
-    printf("Rajan \t BCA 2A\nEnrolment No. \t 04717702024\n****************************\n");
+    printf("Rajan \t BCA 2A\n");
+    printf("Enrolment No. \t 04717702024\n");
+    printf("****************************\n");
     struct Node* head = NULL;
     int choice, data, afterData, beforeData;
 

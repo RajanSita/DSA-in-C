@@ -48,7 +48,9 @@ void traverse(Node* head) {
 }
 
 int main() {
-    printf("Rajan \t BCA 2A\nEnrolment No. \t 04717702024\n****************************\n");
+    printf("Rajan \t BCA 2A\n");
+    printf("Enrolment No. \t 04717702024\n");
+    printf("****************************\n");
     Node* poly1 = createNode(3, 3);
     poly1->next = createNode(2, 2);
     

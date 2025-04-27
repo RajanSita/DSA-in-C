@@ -58,7 +58,9 @@ void traverse(Node* head) {
 }
 
 int main() {
-    printf("Rajan \t BCA 2A\nEnrolment No. \t 04717702024\n****************************\n");
+    printf("Rajan \t BCA 2A\n");
+    printf("Enrolment No. \t 04717702024\n");
+    printf("****************************\n");
     Node* head = NULL;
     insertAtBeginning(&head, 10);
     insertAtEnd(&head, 20);

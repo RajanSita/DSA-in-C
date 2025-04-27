@@ -28,7 +28,6 @@ void delete() {
     printf("Element deleted: %d\n", queue[front]);
     front++;
     if (front > rear) {
-        // Reset queue if all elements are removed
         front = rear = -1;
     }
 }
@@ -46,6 +45,9 @@ void display() {
 }
 
 int main() {
+    printf("Rajan \t BCA 2A\n");
+    printf("Enrolment No. \t 04717702024\n");
+    printf("****************************\n");
     int choice;
     do {
         printf("\n*** Queue Menu ***\n");

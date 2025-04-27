@@ -1,3 +1,4 @@
+//Create a Matrix. Perform addition, subtraction, Transpose and Multiplication using Switch-Case statement.
 #include <stdio.h>
 
 #define ROW 3

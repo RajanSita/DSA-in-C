@@ -1,15 +1,12 @@
+//Write a Program to Perform Pop, Push, Traverse operations on the stack using Pointer (Dynamic Stack).
 #include <stdio.h>
 #include <stdlib.h>
-
-// Structure for stack node
 struct Node {
     int data;
     struct Node* next;
 };
 
 struct Node* top = NULL;
-
-// Push operation
 void push() {
     int value;
     printf("Enter value to push: ");
@@ -27,8 +24,6 @@ void push() {
 
     printf("Pushed %d onto the stack.\n", value);
 }
-
-// Pop operation
 void pop() {
     if (top == NULL) {
         printf("Stack Underflow! No elements to pop.\n");
@@ -40,8 +35,6 @@ void pop() {
     top = top->next;
     free(temp);
 }
-
-// Traverse operation
 void traverse() {
     if (top == NULL) {
         printf("Stack is empty.\n");
@@ -56,8 +49,10 @@ void traverse() {
     }
 }
 
-// Main function with menu
 int main() {
+    printf("Rajan \t BCA 2A\n");
+    printf("Enrolment No. \t 04717702024\n");
+    printf("****************************\n");
     int choice;
     do {
         printf("\n*** Stack Menu (Using Pointers) ***\n");

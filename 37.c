@@ -1,18 +1,13 @@
 //Write a program to perform different operations such as insert, delete, display elements using dynamic queue.
 #include <stdio.h>
 #include <stdlib.h>
-
-// Structure for a node in the queue
 struct Node {
     int data;
     struct Node* next;
 };
-
-// Front and rear pointers for the queue
 struct Node* front = NULL;
 struct Node* rear = NULL;
 
-// Insert (Enqueue) operation
 void insert() {
     int value;
     printf("Enter value to insert: ");
@@ -35,8 +30,6 @@ void insert() {
     }
     printf("Inserted: %d\n", value);
 }
-
-// Delete (Dequeue) operation
 void delete() {
     if (front == NULL) {
         printf("Queue is empty (Underflow)\n");
@@ -54,7 +47,6 @@ void delete() {
     free(temp);
 }
 
-// Display operation
 void display() {
     if (front == NULL) {
         printf("Queue is empty\n");
@@ -70,8 +62,10 @@ void display() {
     printf("\n");
 }
 
-// Main function with menu
 int main() {
+    printf("Rajan \t BCA 2A\n");
+    printf("Enrolment No. \t 04717702024\n");
+    printf("****************************\n");
     int choice;
     do {
         printf("\n*** Dynamic Queue Menu ***\n");

@@ -1,3 +1,4 @@
+//Write a Program to implement Merge Sort.  
 #include <stdio.h>
 
 #define SIZE 5  
@@ -37,8 +38,9 @@ void mergeSort(int arr[], int left, int right) {
 }
 
 int main() {
-    printf("Rajan \t BCA 2A\nEnrolment No. \t 04717702024\n****************************\n");
-
+    printf("Rajan \t BCA 2A\n");
+    printf("Enrolment No. \t 04717702024\n");
+    printf("****************************\n");
     int arr[SIZE];
     printf("Enter %d elements: ", SIZE);
     for (int i = 0; i < SIZE; i++)

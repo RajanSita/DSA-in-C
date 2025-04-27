@@ -5,14 +5,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Structure for a doubly linked list node
 struct Node {
     int data;
     struct Node* prev;
     struct Node* next;
 };
-
-// Function to create a new node
 struct Node* createNode(int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
@@ -20,8 +17,6 @@ struct Node* createNode(int data) {
     newNode->next = NULL;
     return newNode;
 }
-
-// Insert at the beginning
 void insertAtBeginning(struct Node** head, int data) {
     struct Node* newNode = createNode(data);
     if (*head != NULL) {
@@ -30,8 +25,6 @@ void insertAtBeginning(struct Node** head, int data) {
     }
     *head = newNode;
 }
-
-// Insert at the end
 void insertAtEnd(struct Node** head, int data) {
     struct Node* newNode = createNode(data);
     if (*head == NULL) {
@@ -45,8 +38,6 @@ void insertAtEnd(struct Node** head, int data) {
     temp->next = newNode;
     newNode->prev = temp;
 }
-
-// Insert after a given position
 void insertAfterPosition(struct Node** head, int position, int data) {
     struct Node* temp = *head;
     for (int i = 1; i < position && temp != NULL; i++) {
@@ -65,7 +56,6 @@ void insertAfterPosition(struct Node** head, int position, int data) {
     temp->next = newNode;
 }
 
-// Delete from beginning
 void deleteFromBeginning(struct Node** head) {
     if (*head == NULL) {
         printf("List is empty.\n");
@@ -79,7 +69,6 @@ void deleteFromBeginning(struct Node** head) {
     free(temp);
 }
 
-// Delete from end
 void deleteFromEnd(struct Node** head) {
     if (*head == NULL) {
         printf("List is empty.\n");
@@ -98,7 +87,6 @@ void deleteFromEnd(struct Node** head) {
     free(temp);
 }
 
-// Delete at a given position
 void deleteAtPosition(struct Node** head, int position) {
     if (*head == NULL) {
         printf("List is empty.\n");
@@ -128,8 +116,6 @@ void deleteAtPosition(struct Node** head, int position) {
     }
     free(temp);
 }
-
-// Display the list
 void displayList(struct Node* head) {
     struct Node* temp = head;
     printf("List: ");
@@ -141,7 +127,9 @@ void displayList(struct Node* head) {
 }
 
 int main() {
-    printf("Rajan \t BCA 2A\nEnrolment No. \t 04717702024\n****************************\n");
+    printf("Rajan \t BCA 2A\n");
+    printf("Enrolment No. \t 04717702024\n");
+    printf("****************************\n");
     struct Node* head = NULL;
     int choice, data, position;
 

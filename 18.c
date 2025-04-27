@@ -1,3 +1,6 @@
+// WAP to implement Singly Linked List that stores data as integer and perform following operations:
+// Traverse the list to display each element
+// Search for a specific element in the list
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -46,8 +49,9 @@ void search(struct Node* head, int key) {
 }
 
 int main() {
-    printf("Rajan \t BCA 2A\nEnrolment No. \t 04717702024\n****************************\n");
-
+    printf("Rajan \t BCA 2A\n");
+    printf("Enrolment No. \t 04717702024\n");
+    printf("****************************\n");
     struct Node* head = NULL;
     int n, value, key;
 

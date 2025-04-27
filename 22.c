@@ -2,14 +2,10 @@
 //Create a new list that reverse of the first linked list.
 #include <stdio.h>
 #include <stdlib.h>
-
-// Node structure for singly linked list
 struct Node {
     int data;
     struct Node* next;
 };
-
-// Function to create a new node
 struct Node* createNode(int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
@@ -17,7 +13,6 @@ struct Node* createNode(int data) {
     return newNode;
 }
 
-// Function to insert a node at the end of the list
 void insertEnd(struct Node** head, int data) {
     struct Node* newNode = createNode(data);
     if (*head == NULL) {
@@ -31,21 +26,18 @@ void insertEnd(struct Node** head, int data) {
     temp->next = newNode;
 }
 
-// Function to reverse the linked list
 struct Node* reverseList(struct Node* head) {
     struct Node* prev = NULL;
     struct Node* current = head;
     struct Node* next = NULL;
     while (current != NULL) {
-        next = current->next; // Store next node
-        current->next = prev; // Reverse current node's link
-        prev = current;        // Move prev to this node
-        current = next;        // Move to next node
+        next = current->next; 
+        current->next = prev; 
+        prev = current;        
+        current = next;      
     }
-    return prev; // New head
+    return prev; 
 }
-
-// Function to print the linked list
 void printList(struct Node* head) {
     struct Node* temp = head;
     while (temp != NULL) {
@@ -56,11 +48,11 @@ void printList(struct Node* head) {
 }
 
 int main() {
-    printf("Rajan \t BCA 2A\nEnrolment No. \t 04717702024\n****************************\n");
+    printf("Rajan \t BCA 2A\n");
+    printf("Enrolment No. \t 04717702024\n");
+    printf("****************************\n");
     struct Node* head = NULL;
     struct Node* reversedHead = NULL;
-    
-    // Insert elements into the linked list
     insertEnd(&head, 10);
     insertEnd(&head, 20);
     insertEnd(&head, 30);
@@ -69,8 +61,6 @@ int main() {
     
     printf("Original List: ");
     printList(head);
-    
-    // Reverse the linked list
     reversedHead = reverseList(head);
     
     printf("Reversed List: ");

@@ -5,14 +5,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Structure for a Doubly Linked List node
 struct Node {
     int data;
     struct Node* prev;
     struct Node* next;
 };
 
-// Function to create a new node
 struct Node* createNode(int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
@@ -20,8 +18,6 @@ struct Node* createNode(int data) {
     newNode->next = NULL;
     return newNode;
 }
-
-// Function to insert a node at the end
 void insertAtEnd(struct Node** head, int data) {
     struct Node* newNode = createNode(data);
     if (*head == NULL) {
@@ -36,7 +32,6 @@ void insertAtEnd(struct Node** head, int data) {
     newNode->prev = temp;
 }
 
-// Function to traverse and display each element in the list
 void displayList(struct Node* head) {
     if (head == NULL) {
         printf("The list is empty.\n");
@@ -51,7 +46,6 @@ void displayList(struct Node* head) {
     printf("NULL\n");
 }
 
-// Function to search for a specific element in the list
 void searchElement(struct Node* head, int key) {
     struct Node* temp = head;
     int position = 1;
@@ -66,9 +60,10 @@ void searchElement(struct Node* head, int key) {
     printf("Element %d not found in the list.\n", key);
 }
 
-// Main function
 int main() {
-    printf("Rajan \t BCA 2A\nEnrolment No. \t 04717702024\n****************************\n");
+    printf("Rajan \t BCA 2A\n");
+    printf("Enrolment No. \t 04717702024\n");
+    printf("****************************\n");
     struct Node* head = NULL;
     int choice, data, key;
 
