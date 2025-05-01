@@ -1,7 +1,5 @@
-//Write a program to calculate the GCD of two numbers using recursive functions
 #include <stdio.h>
 
-// Recursive function to find GCD
 int gcd(int a, int b) {
     if (b == 0)
         return a;
@@ -15,13 +13,8 @@ int main() {
     printf("****************************\n");
     int num1, num2;
 
-    printf("Enter two positive integers: ");
+    printf("Enter two integers: ");
     scanf("%d %d", &num1, &num2);
-
-    if (num1 <= 0 || num2 <= 0) {
-        printf("Please enter positive integers only.\n");
-        return 0;
-    }
 
     printf("GCD of %d and %d is: %d\n", num1, num2, gcd(num1, num2));
 

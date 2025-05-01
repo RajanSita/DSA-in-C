@@ -60,8 +60,7 @@ int main() {
 
     for (int i = 3; i <= n; i++) {
         first = dequeue();
-        second = getFront(); // front element without removing
-
+        second = getFront(); 
         next = first + second;
         printf("%d ", next);
 

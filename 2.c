@@ -8,6 +8,7 @@ void linearSearch(int arr[], int size, int key) {
         if (arr[i] == key) {
             if (firstOccurrence == -1)
                 firstOccurrence = i; 
+                
             printf("%d ", i);
         }
     }
